@@ -359,7 +359,6 @@ nav ul li a.active {
 }
 
 
-
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -369,6 +368,7 @@ nav ul li a.active {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .button-group button {
@@ -1136,8 +1136,6 @@ nav ul li a.active {
     cursor: pointer;
 }
 
-
-
 .filter1 svg,
 .filter2 svg,
 .filter3 svg{
@@ -1166,6 +1164,121 @@ nav ul li a.active {
 .grid.active3 .element-item{
     max-width: 40%;
 }
+
+.filter__menu {
+    max-width: 330px;
+    width: 100%;
+    box-shadow: 7px 12.124px 26.39px 2.61px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+      
+    z-index: 5;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0 35px;
+    transition: all .3s;
+}
+
+.filter__menu.active {
+    height: auto;
+    overflow: visible;
+    padding: 25px 35px; 
+}
+
+.filter__menu-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.filter__form form {
+    margin-left: 0 !important;
+}
+.filter__form form label {
+    margin-left: 0 !important;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.filter__mini-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.filter__form form label::before{
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.range-form {
+    margin-bottom: 40px;
+}
+
+
+.irs--flat .irs-line {
+    background-color: #111;
+    height: 3px;
+}
+.irs--flat .irs-bar {
+    height: 3px;
+    background-color: transparent;
+}
+
+.irs--flat .irs-min, 
+.irs--flat .irs-max {
+    display: none;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #efb85a;
+    cursor: pointer;
+    
+}
+.irs--flat .irs-handle.state_hover>i:first-child, 
+.irs--flat .irs-handle:hover>i:first-child {
+    background-color: #efb85a;
+}
+
+.irs--flat .irs-handle {
+    top: 15px;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+    top: 40px;
+    color: #999;
+    font-size: 12px;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+    display: none;
+}
+
+.filter__menu button {
+    background-color: #efb85a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    transition: all .3s;
+}
+
+.filter__menu button:hover {
+    background-color: #fff;
+}
+
+
 
 
 /* END CATALOG PAGE */
@@ -1271,9 +1384,7 @@ nav ul li a.active {
     position: relative;
 }
 
-.login .container {
-    
-}
+
 
 .mini__title {
     text-align: center;
@@ -1398,7 +1509,7 @@ nav ul li a.active {
 
 .history__orders {
     margin-top: 75px;
-    background-color: #efb85a;
+    background-color: #fdf8ee;
     position: relative;
     
 }
@@ -1416,6 +1527,7 @@ nav ul li a.active {
     padding: 48px 0 48px 270px;
     font-size: 18px;
     font-weight: 600;
+    justify-content: space-around;
 }
 
 .history__inner::before{
@@ -1438,14 +1550,34 @@ nav ul li a.active {
     box-shadow: 10px 10px 20px 4px rgba(0,0,0, .2);
 }
 
+.number {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0px 10px !important;
+    font-weight: 600;
+}
+
+.nice-number button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 18px;
+    color: #909090;
+    z-index: 50;
+}
+
 .history__title {
     margin-right: 32px;
 }
 
 .history__num {
-    margin-right: 66px;
+    margin-right: 10px;
     color: #775c2d;
     font-weight: 500;
+    margin-left: 10px;
 }
 
 .history__num span {
@@ -1536,7 +1668,7 @@ nav ul li a.active {
 
 .form form input:checked + label::before {
     background-image: url(../images/history-page/Vector.png);
-    
+    background-size: cover;
 }
 
 
@@ -1637,6 +1769,7 @@ nav ul li a.active {
 .cart__inner .history__status{
     margin-right: 45px;
     padding: 17px 45px;
+    background-color: #fff;
 }
 
 .cart__inner .history__status::after{
@@ -1800,6 +1933,8 @@ nav ul li a.active {
     left: 50%;
     transform: translateX(-50%);
 }
+
+
 
 
 /* END REGISTRATION */
@@ -2925,6 +3060,9 @@ nav ul li a.active {
     .header__items {
         margin-left: 20px;
     }
+    .footer__contacts {
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -3319,12 +3457,13 @@ nav ul li a.active {
    .slider__item-text span img {
        width: 100%;
    }
+   .slider__item-text span {
+    font-size: 30px;
+    }
 }
 
 @media (max-width: 376px) {
-    .slider__item-text span {
-        font-size: 34px;
-    }
+    
     .element {
         font-size: 14px !important;
         max-width: 115px !important;
@@ -3371,17 +3510,21 @@ nav ul li a.active {
     .reviwes__slide {
         max-width: 219px !important;
     }
+    .slider__item-text span {
+        font-size: 27px;
+    }
+    .footer__link span {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 321px) {
-    .slider__item-text span {
-        font-size: 30px;
-    }
+    
     .popular__item-text p {
         font-size: 17px;
     }
 }
 
-
+}
 
 
