@@ -27,7 +27,6 @@ $(document).on('click', function(event) {
   }
 });
 
-  
 
 $('.filter1').on('click', function() {
 $('.grid').removeClass('active3');
@@ -40,13 +39,7 @@ $(function(){
   });
   
 
-$(".js-range-slider").ionRangeSlider({
-  type: "double",
-  min: 690,
-  max: 89900,
-  from: 0,
-  to: 50000,
-});
+
 
 
 
