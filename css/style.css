@@ -2148,7 +2148,7 @@ nav ul li a.active {
     font-weight: 600;
     padding-bottom: 10px;
     position: relative;
-    max-width: 355px;
+    max-width: 390px;
     width: 100%;
 }
 
@@ -2176,7 +2176,7 @@ nav ul li a.active {
 
 .buy-item2::after {
     content: '';
-    background-image: url(../images/buyers/icon2.png);
+    background-image: url(../images/buyers/icon7.png);
     width: 65px;
     height: 60px;
     position: absolute;
@@ -2202,7 +2202,7 @@ nav ul li a.active {
 
 .buy-item4::after {
     content: '';
-    background-image: url(../images/buyers/icon4.png);
+    background-image: url(../images/buyers/icon2.png);
     width: 65px;
     height: 60px;
     position: absolute;
@@ -2215,7 +2215,7 @@ nav ul li a.active {
 
 .buy-item5::after {
     content: '';
-    background-image: url(../images/buyers/icon5.png);
+    background-image: url(../images/buyers/icon4.png);
     width: 65px;
     height: 60px;
     position: absolute;
@@ -2228,32 +2228,6 @@ nav ul li a.active {
 
 .buy-item6::after {
     content: '';
-    background-image: url(../images/buyers/icon6.png);
-    width: 65px;
-    height: 60px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.buy-item7::after {
-    content: '';
-    background-image: url(../images/buyers/icon7.png);
-    width: 65px;
-    height: 60px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.buy-item8::after {
-    content: '';
     background-image: url(../images/buyers/icon8.png);
     width: 65px;
     height: 60px;
@@ -2264,6 +2238,8 @@ nav ul li a.active {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
 
 
 
@@ -3063,6 +3039,10 @@ nav ul li a.active {
     .footer__contacts {
         margin-bottom: 40px;
     }
+    .reviwes__slide {
+        max-width: 660px !important;
+    }
+    
 }
 
 
@@ -3110,6 +3090,9 @@ nav ul li a.active {
     .blog__inner aside form input {
         max-width: 145px;
     }
+    .reviwes__slide {
+        max-width: 666px !important;
+    }
 }
 
 @media (max-width: 730px)  {
@@ -3127,7 +3110,7 @@ nav ul li a.active {
         display: block;
     }
     .reviwes__slide {
-        max-width: 600px !important;
+        max-width: 620px !important;
     }
 }
 
@@ -3442,7 +3425,7 @@ nav ul li a.active {
        margin-left: 15px;
    }
    .reviwes__slide {
-    max-width: 300px !important;
+    max-width: 313px !important;
    }
    .order__info .form4 form {
        font-size: 14px;
