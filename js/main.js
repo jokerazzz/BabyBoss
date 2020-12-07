@@ -1,6 +1,7 @@
 new WOW().init();
 
 
+
 $('.mobile-btn').on('click', function(){
     $('.mobile-menu ul').toggleClass('active');
 });
@@ -27,44 +28,48 @@ $(document).on('click', function(event) {
   }
 });
 
+  
 
 $('.filter1').on('click', function() {
 $('.grid').removeClass('active3');
 $('.grid').removeClass('active2');
 });
 
-$(function(){
-    $('input[type="number"]').niceNumber();
-  
-  });
-  
-
-
-
-
-
-
-$('.slider__container').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: true,
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/arrow-left.png" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/arrow-right.png" alt=""></button>',
-    autoplay: true,
-    autoplaySpeed: 3000,    
+$('.callback').on('click', function() {
+  $('.modal-popup').addClass('active');
+  $('body').addClass('active');
+  $('.overlay').addClass('active');
   });
 
-const sliderDotsContainer = document.querySelector('.slick-dots');
-const sliderDots = document.querySelectorAll('.slick-dots li');
-const myDotsContainer = document.querySelector('.slider__elemets');
-const myDots = document.querySelectorAll('.slider__elemets li');
+  $('.hits__item-buy').on('click', function() {
+    $('.modal-popup').addClass('active');
+    $('body').addClass('active');
+    $('.overlay').addClass('active');
+    });
 
-sliderDots.forEach((dot, index) => {
-  dot.textContent = myDots[index].textContent;
-  dot.classList.add('element');
+  $('.close-popup').on('click', function() {
+  $('.modal-popup').removeClass('active');
+  $('body').removeClass('active');
+  $('.overlay').removeClass('active');
+  });
+  
+  $('.btn--close').on('click', function() {
+    $('.modal-popup').removeClass('active');
+    $('body').removeClass('active');
+    $('.overlay').removeClass('active');
+    });
+
+  $('.overlay').on('click', function() {
+    $('.modal-popup').removeClass('active');
+    $('body').removeClass('active');
+    $('.overlay').removeClass('active');
+    });
+
+
+$(".js-range-slider").ionRangeSlider({
+  type: "double",
+  min: 690,
+  max: 89900,
+  from: 0,
+  to: 50000,
 });
-
-myDotsContainer.remove();
-sliderDotsContainer.classList.add('slider__elemets');
-

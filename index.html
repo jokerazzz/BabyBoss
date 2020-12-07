@@ -259,6 +259,7 @@
                 <a href="#">Посмотреть еще</a>
             </div>
         </div>
+        
     </section>
 
     <section class="hits-sale wow fadeInDown">
@@ -357,6 +358,7 @@
                 <a href="#">Посмотреть еще</a>
             </div>
         </div>
+        
     </section>
     <section class="advantage wow fadeInDown">
         <div class="container">
@@ -555,14 +557,14 @@
                 </span>
                 Напишите нам
             </div>
-            <div class="feedback__inner">
-                <input type="text" placeholder="Введите ФИО">
-                <input type="text" placeholder="Ваш номер телефона">
-                <input type="text" placeholder="Ваш e-mail адрес">
-
-                <textarea placeholder="Ваше сообщение"></textarea>
-            </div>
-            <div class="slider-btn"><a href="#">Подробнее</a> </div>
+            <form class="feedback__inner">
+                <input id="name" type="text" name="name" placeholder="Введите ФИО">
+                <input id="phone" type="phone" name="phone" placeholder="Ваш номер телефона">
+                <input id="email" type="email" name="email" placeholder="Ваш e-mail адрес">
+                <textarea id="message" name="message"  placeholder="Ваше сообщение"></textarea>
+            </form>
+            <button id="sendMessage" type="button" class="btn">Отправить</button>
+            <div class="errorMessage"></div>
         </div>
     </section>
     <footer class="footer">
@@ -683,12 +685,41 @@
             <span>Сopyright © 2020 logo.ru. Все права защищены.</span>
         </div>
     </footer>
+    <div class="modal-popup">
+        <form class="modal-content">
+            <span class="close-popup"></span>
+            <input class="phon" type="phone" name="phone" placeholder="Введите Ваш номер">
+            <div class="text-error"></div>
+            <button type="button" id="sendPhone" class="btn">Отправить</button>
+        </form>
+        <form class="modal-content modal-content--success">
+            
+            <div class="add__text-success">
+                Заявка отправлена, с вами свяжутся!
+            </div>
+            <button type="button" class="btn btn--close">ОК</button>
+        </form>
+        <!-- <form class="modal-content modal-content--error">
+            
+            <div class="add__text-error">
+                Введите номер телефона
+            </div>
+            <button type="button" class="btn btn--close">ОК</button>
+        </form> -->
+
+    </div>
+<div class="overlay"></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/maskphone.js"></script>
+    <script src="js/formPhone.js"></script>
+    <script src="js/formMessage.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/mixitup.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/sliders-slick.js"></script>
     <script src="js/main.js"></script>
 </body>
 
